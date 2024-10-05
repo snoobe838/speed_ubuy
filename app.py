@@ -9,6 +9,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+import chromedriver_binary
 
 SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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'
 
@@ -27,6 +28,7 @@ chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--window-size=1366,699") 
 
 service = Service(executable_path=chrome_driver_path)
+driver = webdriver.Chrome(service=Service(), options=chrome_options)
 
 st.title('Ubuy Speed Check')
 
