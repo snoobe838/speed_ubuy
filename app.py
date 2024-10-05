@@ -28,7 +28,6 @@ chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--window-size=1366,699") 
 
 service = Service(executable_path=chrome_driver_path)
-driver = webdriver.Chrome(service=Service(), options=chrome_options)
 
 st.title('Ubuy Speed Check')
 
